@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#00695C</color>
+    <color name="colorAccent">#A7FFEB</color>
+
+    <color name="tabText">#FFFFFF</color>
+    <color name="tabGrey">#263238</color>
+
+    <color name="pale_green">#6BF3AD</color>
+
+    <color name="kp_green">#6BF3AD</color>
+    <color name="kp_yellow">#ffff66</color>
+    <color name="kp_orange">#ff8533</color>
+    <color name="kp_red">#ff1a1a</color>
+    <color name="kp_cyan">#66ffeb</color>
+</resources>

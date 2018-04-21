@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Aurora Forecast</string>
+    <string name="kp_title">Current KP index: </string>
+    <string name="probability_info">Tap here for probability of seeing aurora in your location.</string>
+    <string name="next_hour_kp">NEXT HOUR KP</string>
+    <string name="solar_wind">SOLAR WIND</string>
+    <string name="bz">Bz</string>
+    <string name="bt">Bt</string>
+    <string name="wind_speed">Wind speed</string>
+    <string name="proton_density">Proton density</string>
+    <string name="long_term_kp_forecast">KP - LONG TERM FORECAST</string>
+    <string name="temp_title">Current temperature</string>
+    <string name="cloud_title">Cloudiness: </string>
+    <string name="wind_title">Wind speed: </string>
+    <string name="weather_info">Tap here for weather forecast in your location.</string>
+    <string name="aurora">AURORA</string>
+    <string name="weather">WEATHER</string>
+    <string name="sun">SUN</string>
+</resources>

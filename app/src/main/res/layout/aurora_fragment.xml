@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.CardView
+                style="@style/Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onProbCardClick"
+                app:cardBackgroundColor="@color/colorPrimary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/kpStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:paddingBottom="2dp"
+                                android:paddingEnd="15dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingStart="15dp"
+                                android:paddingTop="5dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/KPCardTitle"
+                                    style="@style/CardTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/ubuntu"
+                                    android:padding="5dp"
+                                    android:text="@string/kp_title" />
+
+                                <TextView
+                                    android:id="@+id/kpText"
+                                    style="@style/CardTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/infoProbability"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="5dp"
+                                android:text="@string/probability_info" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <View
+                style="@style/Divider"
+                android:layout_margin="25dp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/next_hour_kp"
+                style="@style/AuroraTitle"/>
+
+            <com.github.mikephil.charting.charts.HorizontalBarChart
+                android:id="@+id/hourKpChart"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+            </com.github.mikephil.charting.charts.HorizontalBarChart>
+
+            <View
+                style="@style/Divider"
+                android:layout_margin="25dp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/AuroraTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:text="@string/solar_wind" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/bzText"
+                        style="@style/CardTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/bz"
+                        android:textAlignment="center" />
+
+                    <com.github.anastr.speedviewlib.TubeSpeedometer
+                        android:id="@+id/bzGauge"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:padding="15dp"
+                        app:sv_speedometerWidth="30dp"
+                        app:sv_textColor="#FFFFFF"
+                        app:sv_unit="nt"
+                        app:sv_unitTextSize="12dp"
+                        app:sv_speedTextSize="12dp"
+                        app:sv_speedTextPosition="CENTER"
+                        app:sv_unitTextColor="#FFFFFF"
+                        app:sv_speedTextColor="#FFFFFF"
+                        app:sv_speedTextPadding="5dp"
+                        app:sv_unitUnderSpeedText="true"
+                        app:sv_lowSpeedPercent="30"
+                        app:sv_mediumSpeedPercent="50" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/btText"
+                        style="@style/CardTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/bt"
+                        android:textAlignment="center" />
+
+                    <com.github.anastr.speedviewlib.TubeSpeedometer
+                        android:id="@+id/btGauge"
+                        android:layout_width="match_parent"
+                        android:layout_height="101dp"
+                        android:layout_weight="1"
+                        android:padding="15dp"
+                        app:sv_speedometerWidth="30dp"
+                        app:sv_speedTextColor="#FFFFFF"
+                        app:sv_textColor="#FFFFFF"
+                        app:sv_unit="nt"
+                        app:sv_unitTextSize="12dp"
+                        app:sv_speedTextSize="12dp"
+                        app:sv_speedTextPosition="CENTER"
+                        app:sv_unitTextColor="#FFFFFF"
+                        app:sv_speedTextPadding="10dp"
+                        app:sv_unitUnderSpeedText="true"
+                        app:sv_lowSpeedPercent="30"
+                        app:sv_mediumSpeedPercent="50"
+                        app:sv_lowSpeedColor="@color/kp_green"
+                        app:sv_mediumSpeedColor="@color/kp_yellow"
+                        app:sv_highSpeedColor="@color/kp_red"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/windText"
+                        style="@style/CardTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/wind_speed"
+                        android:textAlignment="center" />
+
+                    <com.github.anastr.speedviewlib.TubeSpeedometer
+                        android:id="@+id/windGauge"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:padding="15dp"
+                        app:sv_speedometerWidth="30dp"
+                        app:sv_unit="km/s"
+                        app:sv_unitTextSize="12dp"
+                        app:sv_speedTextSize="12dp"
+                        app:sv_speedTextPosition="CENTER"
+                        app:sv_textColor="#FFFFFF"
+                        app:sv_unitTextColor="#FFFFFF"
+                        app:sv_speedTextColor="#FFFFFF"
+                        app:sv_speedTextPadding="5dp"
+                        app:sv_unitUnderSpeedText="true"
+                        app:sv_lowSpeedPercent="30"
+                        app:sv_mediumSpeedPercent="70"
+                        app:sv_lowSpeedColor="@color/kp_green"
+                        app:sv_mediumSpeedColor="@color/kp_yellow"
+                        app:sv_highSpeedColor="@color/kp_red"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/densityText"
+                        style="@style/CardTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/proton_density"
+                        android:textAlignment="center" />
+
+                    <com.github.anastr.speedviewlib.TubeSpeedometer
+                        android:id="@+id/densityGauge"
+                        android:layout_width="match_parent"
+                        android:layout_height="101dp"
+                        android:layout_weight="1"
+                        android:padding="15dp"
+                        app:sv_speedometerWidth="30dp"
+                        app:sv_speedTextColor="#FFFFFF"
+                        app:sv_textColor="#FFFFFF"
+                        app:sv_unit="cm3"
+                        app:sv_unitTextSize="12dp"
+                        app:sv_speedTextSize="12dp"
+                        app:sv_speedTextPosition="CENTER"
+                        app:sv_unitTextColor="#FFFFFF"
+                        app:sv_speedTextPadding="10dp"
+                        app:sv_unitUnderSpeedText="true"
+                        app:sv_lowSpeedPercent="30"
+                        app:sv_mediumSpeedPercent="50"
+                        app:sv_lowSpeedColor="@color/kp_green"
+                        app:sv_mediumSpeedColor="@color/kp_yellow"
+                        app:sv_highSpeedColor="@color/kp_red"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <View
+                style="@style/Divider"
+                android:layout_margin="25dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/long_term_kp_forecast"
+                style="@style/AuroraTitle"/>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/KpForecastChart"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" >
+
+            </com.github.mikephil.charting.charts.BarChart>
+
+            <View
+                style="@style/Divider"
+                android:layout_margin="25dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Prognoza Zorzy Polarnej</string>
+    <string name="kp_title">Aktualny indeks KP: </string>
+    <string name="probability_info">Dotknij by wyświetlić aktualne prawdopodobieństwo zaobserwowania zorzy w twojej lokalizacji.</string>
+    <string name="next_hour_kp">KP W NASTĘPNEJ GODZINIE</string>
+    <string name="solar_wind">WIATR SŁONECZNY</string>
+    <string name="bz">Bz</string>
+    <string name="bt">Bt</string>
+    <string name="wind_speed">Prędkość wiatru</string>
+    <string name="proton_density">Zagęszczenie protonów</string>
+    <string name="long_term_kp_forecast">KP - PROGNOZA DŁUGOTERMINOWA</string>
+    <string name="temp_title">Aktualna temperatura</string>
+    <string name="cloud_title">Zachmurzenie: </string>
+    <string name="wind_title">Prędkość wiatru: </string>
+    <string name="weather_info">Dotknij by wyświetlić prognozę pogody dla twojej lokalizacji.</string>
+    <string name="aurora">ZORZA</string>
+    <string name="weather">POGODA</string>
+    <string name="sun">SŁOŃCE</string>
+</resources>
